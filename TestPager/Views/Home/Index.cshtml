@@ -1,0 +1,49 @@
+﻿@using WeihanLi.AspNetMvc.MvcSimplePager
+
+@model IPagedListModel<ValueTuple<string,string,string>>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/js/jquery.min.js"></script>
+    <script>
+        var pageIndex = 1, pageSize = 10;
+
+
+        function loadData(pageNum) {
+            if (pageNum) {
+                pageIndex = pageNum;
+            } else {
+                pageIndex = 1;
+            }
+            $.get('@Url.Action("index")',
+                { "pageIndex": pageIndex, "pageSize": pageSize },
+                function(data, status) {
+                    if (status == "success" && data) {
+                        $("#div_main").html(data);
+                    } else {
+                        alert("数据加载失败！");
+                    }
+                });
+        }
+    </script>
+</head>
+<body>
+    <div id="div_main">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>@item.Item1######@item.Item2######### @item.Item3</li>
+            }
+        </ul>
+        @Html.Pager(Model.Pager, pageIndex => String.Format("javascript:loadData({0})", pageIndex), "_PagerPartial", displayMode: PagingDisplayMode.IfNeeded)
+    </div>
+    
+</body>
+</html>

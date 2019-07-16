@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPager", "TestPager\TestPager.csproj", "{CA0F6B3E-0473-4753-8375-B68B5D7D1564}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA0F6B3E-0473-4753-8375-B68B5D7D1564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA0F6B3E-0473-4753-8375-B68B5D7D1564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA0F6B3E-0473-4753-8375-B68B5D7D1564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA0F6B3E-0473-4753-8375-B68B5D7D1564}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18D69ADA-DD62-4043-BF17-901A910EA1F9}
+	EndGlobalSection
+EndGlobal
